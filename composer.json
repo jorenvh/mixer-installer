@@ -1,8 +1,7 @@
 {
-    "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
-    "keywords": ["framework", "laravel", "console", "zero", "cli"],
-    "homepage": "http://laravel-zero.com",
+    "name": "codeswitch/mixer-installer",
+    "description": "Installer for the mixer template",
+    "homepage": "http://codeswitch.be",
     "type": "project",
     "license": "MIT",
     "support": {
