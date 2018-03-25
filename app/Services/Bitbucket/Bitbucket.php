@@ -20,7 +20,7 @@ class Bitbucket
         $guzzleClient = new Client(['base_uri' => config('bitbucket.base_url')]);
         $statusCode = $guzzleClient
             ->get($endpoint, [
-                'save_to' => storage_path(config('bitbucket.repo').'.zip'),
+                'save_to' => install_path(config('bitbucket.repo').'.zip'),
                 'auth' => [config('bitbucket.username'), config('bitbucket.password')]
             ])
             ->getStatusCode();
