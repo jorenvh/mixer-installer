@@ -77,6 +77,7 @@ class Create extends Command
 
         $this->task('Extracting project files', function() {
             $this->extractProject();
+            $this->deleteDownloadedZip();
         });
 
         $this->task('Moving project files', function() {
@@ -160,5 +161,10 @@ class Create extends Command
     private function rollbackCreatedDirectory()
     {
         File::deleteDirectory(install_path($this->argument('name')));
+    }
+
+    private function deleteDownloadedZip()
+    {
+        File::delete(install_path(config('bitbucket.repo').'.zip'));
     }
 }
